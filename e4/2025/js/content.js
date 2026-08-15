@@ -661,7 +661,7 @@ window.PREPA = (() => {
   const TRANSFERT = [
     {
       session: "2025-11 · Nouvelle-Calédonie",
-      support: "Transstockeurs Kloosterboer (−20 °C)",
+      support: "Transstockeurs Kloosterboer (−20 °C, déjà sur ce site)",
       keep: "Même esprit E4 : lire le DT, valider une modification, conclure.",
       new: "Schéma de terre TN, disjoncteur (Ir / Ii), section de câble, durée de vie L10 d’un galet, cycle frigorifique.",
     },

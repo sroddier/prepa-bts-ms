@@ -32,8 +32,8 @@ window.SUJETS = [
     epreuve: "E4",
     session: "nov. 2025 · NC",
     titre: "Transstockeurs Kloosterboer",
-    resume: "Schéma de terre TN, disjoncteur, durée de vie L10.",
+    resume: "TN-C/S, IR/Ii, câble 95 mm², cycle +5 %, L10, −20 °C.",
     href: "e4/2025-nc/",
-    statut: "bientot",
+    statut: "ouvert",
   },
 ];

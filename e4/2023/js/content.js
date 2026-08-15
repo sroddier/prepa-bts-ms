@@ -547,7 +547,7 @@ window.PREPA = (() => {
     },
     {
       session: "2025-11 · NC",
-      support: "Transstockeurs Kloosterboer",
+      support: "Transstockeurs Kloosterboer (déjà sur ce site)",
       keep: "Catalogue, conclusion chiffrée.",
       new: "Schéma TN, disjoncteur, durée de vie L10, −20 °C.",
     },
