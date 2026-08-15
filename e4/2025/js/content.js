@@ -673,7 +673,7 @@ window.PREPA = (() => {
     },
     {
       session: "2023-06 · Métropole",
-      support: "Centre de pétrissage Pasquier",
+      support: "Centre de pétrissage Pasquier (déjà sur ce site)",
       keep: "4–20 mA et API : réinvestissement direct de la partie 4 de 2025.",
       new: "Classes d’équivalence, courroies, lubrification motoréducteur.",
     },

@@ -24,9 +24,9 @@ window.SUJETS = [
     epreuve: "E4",
     session: "juin 2023",
     titre: "Centre de pétrissage Pasquier",
-    resume: "Courroies, 4–20 mA, API — réinvestissement de la mesure 2025.",
+    resume: "Classes d’équivalence, courroie SPA, huile Rossi, Kp AGMA, 4–20 mA.",
     href: "e4/2023/",
-    statut: "bientot",
+    statut: "ouvert",
   },
   {
     epreuve: "E4",

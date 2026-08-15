@@ -546,7 +546,7 @@ window.PREPA = (() => {
     },
     {
       session: "2023-06 · Métropole",
-      support: "Centre de pétrissage Pasquier",
+      support: "Centre de pétrissage Pasquier (déjà sur ce site)",
       keep: "Lecture de catalogue, moteur, 4–20 mA.",
       new: "Courroies, classes d’équivalence, lubrification.",
     },
