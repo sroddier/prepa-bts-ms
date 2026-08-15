@@ -16,9 +16,9 @@ window.SUJETS = [
     epreuve: "E4",
     session: "juin 2024",
     titre: "Presse à compacter ALLTUB",
-    resume: "Hydraulique, GRAFCET, électrique triphasé.",
+    resume: "Hydraulique deux pompes, porte, câble 6 mm², barrière, réseau.",
     href: "e4/2024/",
-    statut: "bientot",
+    statut: "ouvert",
   },
   {
     epreuve: "E4",
