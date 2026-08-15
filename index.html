@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prépa BTS MS — Maintenance des systèmes</title>
+  <meta name="description" content="Parcours autonomes pour les épreuves du BTS Maintenance des Systèmes, option Systèmes de production." />
+  <link rel="stylesheet" href="css/hub.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect fill='%2310141c' width='64' height='64' rx='10'/><text x='32' y='42' text-anchor='middle' font-size='18' font-family='Georgia' fill='%23e8b931'>MS</text></svg>" />
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <span class="mark">MS</span>
+      <div>
+        <strong>Prépa BTS MS</strong>
+        <em>Maintenance des systèmes · option SP</em>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="kicker">Parcours autonomes</div>
+      <h1>Préparer les épreuves<br>sans attendre le cours.</h1>
+      <p>Un sujet = un parcours (diagnostic, fiches, exercices, DQR, blanc). La progression reste dans le navigateur de l’élève. Aucun compte.</p>
+    </section>
+
+    <h2 class="section-title">Sujets ouverts</h2>
+    <div class="grid" id="ouverts"></div>
+
+    <h2 class="section-title">À venir</h2>
+    <div class="grid" id="avenir"></div>
+  </main>
+
+  <footer>
+    Ressources d’entraînement pour le BTS MS. Les annales officielles restent sur
+    <a href="https://sti.eduscol.education.fr/concours_examens" target="_blank" rel="noopener">éduscol STI</a>.
+  </footer>
+
+  <script src="js/sujets.js"></script>
+  <script>
+    const card = (s) => {
+      const inner = `
+        <span class="tag">${s.epreuve} · ${s.session}</span>
+        <h3>${s.titre}</h3>
+        <p>${s.resume}</p>
+        <span class="cta">${s.statut === "ouvert" ? "Ouvrir le parcours →" : "Bientôt"}</span>`;
+      return s.statut === "ouvert"
+        ? `<a class="card" href="${s.href}">${inner}</a>`
+        : `<article class="card muted">${inner}</article>`;
+    };
+    const sujets = window.SUJETS || [];
+    document.getElementById("ouverts").innerHTML = sujets.filter((s) => s.statut === "ouvert").map(card).join("") || "<p class='empty'>Aucun sujet publié.</p>";
+    document.getElementById("avenir").innerHTML = sujets.filter((s) => s.statut !== "ouvert").map(card).join("") || "<p class='empty'>—</p>";
+  </script>
+</body>
+</html>

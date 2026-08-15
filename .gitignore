@@ -1,0 +1,9 @@
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.log
+.vscode/
+.idea/
+_qa/
+__pycache__/
+.venv/
