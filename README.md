@@ -2,6 +2,9 @@
 
 Parcours autonomes pour le **BTS Maintenance des Systèmes**, option Systèmes de production.
 
+**Site public :** [https://sroddier.github.io/prepa-bts-ms/](https://sroddier.github.io/prepa-bts-ms/)  
+**E4 2025 :** [https://sroddier.github.io/prepa-bts-ms/e4/2025/](https://sroddier.github.io/prepa-bts-ms/e4/2025/)
+
 | Dossier | Contenu | Statut |
 |---------|---------|--------|
 | [e4/2025/](e4/2025/) | E4 juin 2025 — Transbordeur Stellantis | Ouvert |
