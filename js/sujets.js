@@ -36,4 +36,12 @@ window.SUJETS = [
     href: "e4/2025-nc/",
     statut: "ouvert",
   },
+  {
+    epreuve: "E4",
+    session: "Sujet 0",
+    titre: "Centrale d’air comprimé ROLLAIR",
+    resume: "Plaque Δ400/Y690, étoile-triangle, flexion IPE, câble lettre F.",
+    href: "e4/sujet-0/",
+    statut: "ouvert",
+  },
 ];
