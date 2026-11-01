@@ -1,6 +1,11 @@
 (() => {
   const { SKILLS, DATA_SUJET, DIAGNOSTIC, FICHES, EXERCICES, DQR, TRANSFERT, CONTRAT } = window.PREPA;
   const KEY = "prepa-e4-2021-v1";
+  window.PREPA_SUJET = KEY;
+  if (!window.Profil || !Profil.nom() || !sessionStorage.getItem("prepa-ouvert:" + Profil.slug() + ":" + KEY)) {
+    if (window.Profil && Profil.nom()) Profil.ouvrir(KEY).finally(() => location.reload());
+    return;
+  }
   const $app = document.getElementById("app");
   const $nav = document.getElementById("main-nav");
   const $title = document.getElementById("topbar-title");
@@ -17,14 +22,27 @@
 
   const load = () => {
     try {
-      return { ...emptyState(), ...JSON.parse(localStorage.getItem(KEY) || "{}") };
+      return { ...emptyState(), ...JSON.parse(localStorage.getItem(Profil.cle(KEY)) || "{}") };
     } catch {
       return emptyState();
     }
   };
-  const save = () => localStorage.setItem(KEY, JSON.stringify(state));
+  const save = () => {
+    state.updated = Date.now();
+    localStorage.setItem(Profil.cle(KEY), JSON.stringify(state));
+    Profil.pousser(KEY, state);
+  };
   let state = load();
   if (!state.blanc) state.blanc = emptyState().blanc;
+  document.addEventListener("prepa-distant", (ev) => {
+    const d = ev.detail;
+    if (!d || d.sujet !== KEY || !d.etat) return;
+    if ((d.etat.updated || 0) <= (state.updated || 0)) return;
+    state = { ...emptyState(), ...d.etat };
+    if (!state.blanc) state.blanc = emptyState().blanc;
+    localStorage.setItem(Profil.cle(KEY), JSON.stringify(state));
+    render();
+  });
 
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => (
     { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]
@@ -41,7 +59,7 @@
   $backdrop.onclick = closeMenu;
 
   document.getElementById("btn-reset").onclick = () => {
-    if (confirm("Effacer toute la progression enregistrée dans ce navigateur ?")) {
+    if (confirm("Effacer l’avancement de ce profil sur ce parcours ?")) {
       state = emptyState();
       save();
       location.hash = "#/";
@@ -770,7 +788,7 @@
       <h3>Hébergement</h3>
       <p>Double-cliquer <span class="formule">serveur.bat</span> ou, dans ce dossier :</p>
       <p><span class="formule">python -m http.server 5500</span> puis ouvrir <span class="formule">http://127.0.0.1:5500</span></p>
-      <p>La progression est stockée dans le navigateur de l’élève (pas de comptes). En salle, prévoir un poste par étudiant ou un profil navigateur.</p>
+      <p>Chaque élève indique son prénom et son nom. L’avancement de ce parcours suit ce profil. Bouton Sauvegarde : copier le code, puis le coller sur un autre ordinateur avec le même nom. La reprise sans code se branche en déployant <span class="formule">collecte/Code.gs</span> et en collant l’URL dans <span class="formule">js/profil.js</span>.</p>
       <p class="tiny">Les corrigés complets sont dans les fiches, le DQR et le blanc. Ne pas projeter l’espace enseignant pendant le blanc.</p>
     </article>`;
 
