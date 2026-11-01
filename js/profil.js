@@ -1,7 +1,6 @@
-/* Nom de profil et sauvegarde de l’avancement, partagés par le sommaire et chaque parcours.
-   SYNC_URL : coller l’URL /exec après le déploiement de collecte/Code.gs. */
+/* Nom de profil et sauvegarde de l’avancement, partagés par le sommaire et chaque parcours. */
 (() => {
-  const SYNC_URL = "";
+  const SYNC_URL = "https://script.google.com/macros/s/AKfycbxXYJ0ZQ2VxJxTT8A-8fnVp-Sgx-12tHD0BLbds37Z0Lz6exj1rDDKG7p6N-NZKn-KVXw/exec";
   const NOM_KEY = "prepa-profil-nom";
   const SUJETS = [
     "prepa-e4-2021-v1",
@@ -307,12 +306,12 @@
     el.innerHTML = `
       <form class="prepa-carte" id="prepa-form">
         <h2>Nom de profil</h2>
-        <p>Les ordinateurs de la salle changent. Écris ton prénom et ton nom. Le même nom, avec le code de sauvegarde, retrouve l’avancement sur un autre poste.</p>
+        <p>Les ordinateurs de la salle changent. Écris ton prénom et ton nom. Le même nom retrouve l’avancement sur un autre poste.</p>
         <label>Prénom et nom
           <input id="prepa-nom" name="nom" autocomplete="name" maxlength="60" required>
         </label>
         <p>Profil enregistré sous <span class="prepa-slug" id="prepa-slug">…</span></p>
-        <label>Code de sauvegarde, si tu changes d’ordinateur
+        <label>Code de sauvegarde, seulement si l’avancement en ligne n’arrive pas
           <textarea id="prepa-code" placeholder="Colle le code copié sur l’autre poste"></textarea>
         </label>
         <p class="prepa-err" id="prepa-err" hidden></p>
@@ -346,7 +345,7 @@
     el.innerHTML = `
       <form class="prepa-carte" id="prepa-form-sauve">
         <h2>Sauvegarde</h2>
-        <p>Profil <span class="prepa-slug">${slug() || "…"}</span>. Copie ce code avant de quitter le poste, puis colle-le sur le nouvel ordinateur avec le même nom.</p>
+        <p>Profil <span class="prepa-slug">${slug() || "…"}</span>. Le même nom retrouve l’avancement en ligne. Ce code sert si le nouveau poste n’a pas pu le joindre.</p>
         <textarea id="prepa-code-sortie" readonly>${code.replace(/</g, "")}</textarea>
         <p class="prepa-err" id="prepa-sauve-msg" hidden></p>
         <div class="prepa-actions">

@@ -789,7 +789,7 @@
       <h3>Hébergement</h3>
       <p>Double-cliquer <span class="formule">serveur.bat</span> ou, dans ce dossier :</p>
       <p><span class="formule">python -m http.server 5500</span> puis ouvrir <span class="formule">http://127.0.0.1:5500</span></p>
-      <p>Chaque élève indique son prénom et son nom. L’avancement de ce parcours suit ce profil. Bouton Sauvegarde : copier le code, puis le coller sur un autre ordinateur avec le même nom. La reprise sans code se branche en déployant <span class="formule">collecte/Code.gs</span> et en collant l’URL dans <span class="formule">js/profil.js</span>.</p>
+      <p>Chaque élève indique son prénom et son nom. Le même nom retrouve l’avancement sur un autre ordinateur. Le bouton Sauvegarde fournit un code de secours si la copie en ligne n’arrive pas.</p>
       <p class="tiny">Les corrigés complets sont dans les fiches, le DQR et le blanc. Ne pas projeter l’espace enseignant pendant le blanc.</p>
     </article>`;
 
