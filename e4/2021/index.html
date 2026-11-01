@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prépa E4 2021 — Suremballeuse PAKER</title>
+  <meta name="description" content="Parcours autonome pour l’épreuve E4 du BTS MS option SP, sujet métropole juin 2021 (suremballeuse PAKER, Lactalis Andrézieux)." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="../../img/logo-artaud.png" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#/">
+        <img class="logo" src="../../img/logo-artaud.png" alt="Lycée Antonin Artaud" />
+        <span class="brand-text">
+          <strong>Prépa E4 2021</strong>
+          <em>BTS MS · option SP</em>
+        </span>
+      </a>
+      <nav class="nav" id="main-nav"></nav>
+      <div class="sidebar-foot">
+        <a class="linkish" href="../../index.html">Tous les sujets BTS</a>
+        <a class="linkish" href="assets/E4-2021.pdf" target="_blank" rel="noopener">PDF officiel 2021</a>
+        <button type="button" class="linkish" id="btn-reset" title="Effacer la progression de ce navigateur">Réinitialiser</button>
+      </div>
+    </aside>
+
+    <div class="main-wrap">
+      <header class="topbar">
+        <button type="button" class="icon-btn" id="btn-menu" aria-label="Menu">☰</button>
+        <div class="topbar-title" id="topbar-title">Accueil</div>
+        <div class="topbar-actions">
+          <a class="chip" href="#/formules">Formules</a>
+          <a class="chip ghost" href="assets/E4-2021.pdf" target="_blank" rel="noopener">PDF officiel</a>
+        </div>
+      </header>
+      <main class="content" id="app"></main>
+    </div>
+  </div>
+
+  <div class="drawer-backdrop" id="drawer-backdrop" hidden></div>
+
+  <script src="js/content.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

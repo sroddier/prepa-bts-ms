@@ -30,6 +30,14 @@ window.SUJETS = [
   },
   {
     epreuve: "E4",
+    session: "juin 2021",
+    titre: "Suremballeuse PAKER",
+    resume: "Variateur OLF, courroie HTD 35 Hz, vérin 3,7 bar, colle et sonde Ni120.",
+    href: "e4/2021/",
+    statut: "ouvert",
+  },
+  {
+    epreuve: "E4",
     session: "nov. 2025 · NC",
     titre: "Transstockeurs Kloosterboer",
     resume: "TN-C/S, IR/Ii, câble 95 mm², cycle +5 %, L10, −20 °C.",
